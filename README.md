@@ -6,8 +6,8 @@
 
 ```yaml
 notify:
-  - name: gosms-ru
-    platform: gosms-ru
+  - name: gosms_ru
+    platform: gosms_ru
     from_number: HASS
     api_key: key
 ```
@@ -18,7 +18,7 @@ notify:
 Вы можете использовать сервис notify.gosms-ru для отправления SMS сообщений.
 
 ```yaml
-service: notify.gosms-ru
+service: notify.gosms_ru
   message: 'Привет как дела'
   target: 
     - '+79920000001'
