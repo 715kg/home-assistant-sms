@@ -1,1 +1,1 @@
-
+"""The GOSMS.RU component."""
