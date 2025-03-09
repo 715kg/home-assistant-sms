@@ -1,0 +1,6 @@
+ {
+  "name": "GoSMS.ru Notify",
+  "country": "RU",
+  "render_readme": false,
+  "domains": ["notify"]
+}
