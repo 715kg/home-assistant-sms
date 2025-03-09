@@ -1,0 +1,6 @@
+{
+  "domain": "gosms-ru",
+  "name": "GOSMS.ru Service",
+  "documentation": "https://github.com/715kg/home-assistant-sms",
+  "codeowners": ["@715kg"]
+}
