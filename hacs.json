@@ -1,21 +1,6 @@
 {
   "name": "GOSMS.RU",
   "render_readme": true,
-  "domains": ["notify"],
-  "homeassistant": "2023.8.0",
-  "iot_standards": ["cloud_polling"],
-  "zip_release": true,
-  "filename": "gosms.zip",
-  "hide_default_branch": true,
   "content_in_root": false,
-  "country": "RU",
-  "topics": [
-    "home-assistant",
-    "homeassistant",
-    "hass",
-    "automation",
-    "notify",
-    "sms",
-    "gosms"
-  ]
+  "country": "RU"
 }
