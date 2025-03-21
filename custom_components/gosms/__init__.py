@@ -6,6 +6,7 @@ from homeassistant.helpers import translation
 import re
 import voluptuous as vol
 from .const import DOMAIN, SERVICE_SEND_MESSAGE
+from homeassistant.exceptions import HomeAssistantError
 
 def get_error_message(hass: HomeAssistant, error_key: str, language: str = 'en') -> str:
     """Get error message in specified language."""
@@ -28,6 +29,14 @@ def validate_phone_number(phone: str, hass: HomeAssistant, language: str = 'en')
     
     return phone
 
+def validate_message(message: str, hass: HomeAssistant, language: str = 'en') -> str:
+    """Validate message text."""
+    if not message:
+        raise ValueError(get_error_message(hass, 'message_too_short', language))
+    if len(message) > 300:
+        raise ValueError(get_error_message(hass, 'message_too_long', language))
+    return message
+
 async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Set up the GOSMS.RU component."""
     return True
@@ -48,10 +57,12 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigType) -> bool:
         language = hass.data[DOMAIN].get("language", "en")
 
         try:
+            # Валидация сообщения
+            message = validate_message(message, hass, language)
             # Валидация и форматирование номера телефона
             phone = validate_phone_number(phone, hass, language)
         except ValueError as e:
-            raise ValueError(get_error_message(hass, 'invalid_format', language).format(str(e)))
+            raise HomeAssistantError(str(e))
 
         try:
             # Логика отправки SMS
@@ -59,7 +70,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigType) -> bool:
                 send_sms, hass.data[DOMAIN]["api_key"], phone, message, device_id, hass, language
             )
         except Exception as e:
-            raise Exception(get_error_message(hass, 'api_error', language).format(str(e)))
+            raise HomeAssistantError(get_error_message(hass, 'api_error', language).format(str(e)))
 
     # Схема для валидации данных сервиса
     service_schema = vol.Schema({

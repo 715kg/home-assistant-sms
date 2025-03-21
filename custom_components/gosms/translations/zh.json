@@ -21,11 +21,31 @@
     }
   },
   "service": {
+    "send_message": {
+      "name": "发送短信",
+      "description": "通过 GOSMS.RU 服务发送短信",
+      "fields": {
+        "message": {
+          "name": "消息",
+          "description": "消息文本（1到300个字符）"
+        },
+        "phone": {
+          "name": "电话号码",
+          "description": "收件人的国际格式电话号码"
+        },
+        "device_id": {
+          "name": "设备 ID",
+          "description": "GOSMS.RU 面板中的设备 ID（可选）"
+        }
+      }
+    },
     "errors": {
       "invalid_phone": "电话号码必须包含10到15位数字",
       "api_error": "发送SMS时出错: {}",
       "no_message_id": "未从服务器收到消息ID",
-      "invalid_format": "电话号码格式无效: {}"
+      "invalid_format": "电话号码格式无效: {}",
+      "message_too_short": "消息必须至少包含1个字符",
+      "message_too_long": "消息不能超过300个字符"
     }
   }
 } 

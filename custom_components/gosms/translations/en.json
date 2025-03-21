@@ -21,11 +21,31 @@
     }
   },
   "service": {
+    "send_message": {
+      "name": "Send SMS",
+      "description": "Send an SMS message via GOSMS.RU service",
+      "fields": {
+        "message": {
+          "name": "Message",
+          "description": "Message text (1 to 300 characters)"
+        },
+        "phone": {
+          "name": "Phone Number",
+          "description": "Recipient's phone number in international format"
+        },
+        "device_id": {
+          "name": "Device ID",
+          "description": "Device ID from GOSMS.RU panel (optional)"
+        }
+      }
+    },
     "errors": {
       "invalid_phone": "Phone number must be between 10 and 15 digits",
       "api_error": "Failed to send SMS: {}",
       "no_message_id": "No message ID received from server",
-      "invalid_format": "Invalid phone number format: {}"
+      "invalid_format": "Invalid phone number format: {}",
+      "message_too_short": "Message must contain at least 1 character",
+      "message_too_long": "Message must not exceed 300 characters"
     }
   }
 }

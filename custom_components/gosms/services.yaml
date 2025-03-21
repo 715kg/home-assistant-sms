@@ -1,22 +1,29 @@
 send_message:
   name: Send SMS
-  description: Send SMS via GOSMS.RU
+  description: Send an SMS message via GOSMS.RU service
   fields:
     message:
       name: Message
-      description: Message text to send
-      example: "Hello, this is a test message!"
+      description: Message text (1 to 300 characters)
+      required: true
+      example: "Hello from Home Assistant!"
       selector:
-        text: {}
+        text:
+          min: 1
+          max: 300
     phone:
       name: Phone Number
-      description: Recipient's phone number in format +7XXXXXXXXXX
-      example: "+79001234567"
+      description: Recipient's phone number in international format
+      required: true
+      example: "+79123456789"
       selector:
-        text: {}
+        text:
+          min: 10
+          max: 15
     device_id:
       name: Device ID
-      description: GOSMS.RU device ID (optional)
-      example: "123e4567-e89b-12d3-a456-426614174000"
+      description: Device ID from GOSMS.RU panel (optional)
+      required: false
+      example: "12345678-1234-1234-1234-123456789012"
       selector:
         text: {} 
