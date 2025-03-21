@@ -1,0 +1,31 @@
+{
+  "title": "短信通知 - GOSMS.RU",
+  "config": {
+    "step": {
+      "user": {
+        "title": "GOSMS.RU 设置",
+        "description": "输入您的 GOSMS.RU API 密钥。您可以在网站上的（API 集成）部分获取 - 创建 API 时需要允许访问（可以发送消息）",
+        "data": {
+          "api_key": "API 密钥",
+          "device_id": "面板中的设备 ID（可选）"
+        }
+      }
+    }
+  },
+  "errors": {
+    "api_key": {
+      "invalid_jwt": "API 密钥格式无效"
+    },
+    "device_id": {
+      "invalid_uuid": "设备 ID 格式无效"
+    }
+  },
+  "service": {
+    "errors": {
+      "invalid_phone": "电话号码必须包含10到15位数字",
+      "api_error": "发送SMS时出错: {}",
+      "no_message_id": "未从服务器收到消息ID",
+      "invalid_format": "电话号码格式无效: {}"
+    }
+  }
+} 

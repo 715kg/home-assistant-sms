@@ -1,0 +1,63 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+pyvenv.cfg
+tutorial-env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Home Assistant
+.storage/
+.cloud/
+.google.token
+.uuid
+.HA_VERSION
+.homeassistant/
+home-assistant.log*
+ozw_log.txt
+home-assistant_v2.db
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
+
+# Project specific
+*.log
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bak
+*.tmp
+*.temp
+*.cache

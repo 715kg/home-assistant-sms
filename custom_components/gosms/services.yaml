@@ -1,0 +1,22 @@
+send_message:
+  name: Send SMS
+  description: Send SMS via GOSMS.RU
+  fields:
+    message:
+      name: Message
+      description: Message text to send
+      example: "Hello, this is a test message!"
+      selector:
+        text: {}
+    phone:
+      name: Phone Number
+      description: Recipient's phone number in format +7XXXXXXXXXX
+      example: "+79001234567"
+      selector:
+        text: {}
+    device_id:
+      name: Device ID
+      description: GOSMS.RU device ID (optional)
+      example: "123e4567-e89b-12d3-a456-426614174000"
+      selector:
+        text: {} 
