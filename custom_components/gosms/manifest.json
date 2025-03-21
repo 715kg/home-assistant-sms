@@ -1,0 +1,12 @@
+{
+  "domain": "gosms",
+  "name": "GOSMS.RU Notifications",
+  "version": "1.23",
+  "documentation": "https://github.com/715kg/home-assistant-sms",
+  "dependencies": [],
+  "codeowners": ["@715kg"],
+  "requirements": ["requests>=2.25.0"],
+  "config_flow": true,
+  "iot_class": "cloud_push",
+  "services": ["services.yaml"]
+}

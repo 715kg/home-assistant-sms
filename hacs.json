@@ -1,6 +1,11 @@
- {
-  "name": "GoSMS.ru Notify",
-  "country": "RU",
-  "render_readme": false,
-  "domains": ["notify"]
+{
+  "name": "GOSMS.RU",
+  "render_readme": true,
+  "domains": ["notify"],
+  "homeassistant": "2023.8.0",
+  "iot_standards": ["cloud_polling"],
+  "zip_release": true,
+  "filename": "gosms.zip",
+  "hide_default_branch": true,
+  "content_in_root": false
 }

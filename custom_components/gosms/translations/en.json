@@ -1,0 +1,31 @@
+{
+  "title": "SMS Notifications - GOSMS.RU",
+  "config": {
+    "step": {
+      "user": {
+        "title": "GOSMS.RU Setup",
+        "description": "Enter your GOSMS.RU API key. You can get it on the website in the (API Integration) section - when creating an API, you need to allow access (Can send messages)",
+        "data": {
+          "api_key": "API Key",
+          "device_id": "Device ID from the panel (Optional)"
+        }
+      }
+    }
+  },
+  "errors": {
+    "api_key": {
+      "invalid_jwt": "Invalid API key format"
+    },
+    "device_id": {
+      "invalid_uuid": "Invalid Device ID format"
+    }
+  },
+  "service": {
+    "errors": {
+      "invalid_phone": "Phone number must be between 10 and 15 digits",
+      "api_error": "Failed to send SMS: {}",
+      "no_message_id": "No message ID received from server",
+      "invalid_format": "Invalid phone number format: {}"
+    }
+  }
+}

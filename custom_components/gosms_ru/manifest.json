@@ -1,9 +1,0 @@
-{
-  "domain": "gosms_ru",
-  "name": "GOSMS.RU Notifications",
-  "version": "1.0",
-  "documentation": "https://github.com/715kg/home-assistant-sms",
-  "dependencies": [],
-  "codeowners": ["@715kg"],
-  "requirements": ["requests>=2.25.0"]
-}
