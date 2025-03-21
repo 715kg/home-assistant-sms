@@ -7,5 +7,15 @@
   "zip_release": true,
   "filename": "gosms.zip",
   "hide_default_branch": true,
-  "content_in_root": false
+  "content_in_root": false,
+  "country": "RU",
+  "topics": [
+    "home-assistant",
+    "homeassistant",
+    "hass",
+    "automation",
+    "notify",
+    "sms",
+    "gosms"
+  ]
 }
